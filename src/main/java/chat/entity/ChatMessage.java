@@ -1,6 +1,6 @@
-package entity;
+package chat.entity;
 
-import enumeration.MessageType;
+import chat.enumeration.MessageType;
 import lombok.*;
 
 import java.util.Date;

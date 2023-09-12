@@ -1,4 +1,4 @@
-package enumeration;
+package chat.enumeration;
 
 public enum MessageType {
     MESSAGE,
