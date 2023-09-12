@@ -15,4 +15,9 @@ public class ChatEventListener {
     public void handleSessionDisconnected(SessionConnectedEvent event) {
         System.out.println("DISCONNECTED");
     }
+
+    @EventListener
+    public void handleUserCount(SessionConnectedEvent event) {
+        System.out.println("USERCOUNT");
+    }
 }

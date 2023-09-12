@@ -20,4 +20,16 @@ public class ChatController {
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
         return chatMessage;
     }
+
+    @MessageMapping("/group/${group.id}.sendMessage")
+    @SendTo("/topic/group/${group.id}")
+    public ChatMessage sendGroupMessage(@Payload ChatMessage chatMessage) {
+        return chatMessage;
+    }
+
+    @MessageMapping("/group/${group.id}.addUser")
+    @SendTo("/topic/group/${group.id}")
+    public ChatMessage addGroupUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
+        return chatMessage;
+    }
 }
